@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Mutation {
+  addUser(newUserData: UserInput!): UserModel!
+}
+
+type Query {
+  removeUser(id: Float!): Boolean!
+  user(id: Float!): UserModel!
+  users(id: Float): [UserModel!]!
+}
+
+type Subscription {
+  userAdded: UserModel!
+}
+
+input UserInput {
+  phone: Float!
+}
+
+type UserModel {
+  createdAt: DateTime!
+  id: Float!
+  phone: Float!
+  updatedAt: DateTime!
+}
